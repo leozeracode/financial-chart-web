@@ -9,7 +9,6 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
     title: 'Financial Chat',
     description: 'Real-time chat with stock quotes',
-    generator: 'v0.app',
     icons: {
         icon: [
             {
