@@ -37,7 +37,6 @@ export const RegisterForm: React.FC = () => {
   const form = useForm<RegisterFormData>({
     resolver: zodResolver(registerSchema),
     defaultValues: {
-      username: '',
       email: '',
       password: '',
       confirmPassword: '',
@@ -49,9 +48,8 @@ export const RegisterForm: React.FC = () => {
     setError(null)
 
     try {
-      const response = await register(data)
-      setAuth(response.user, response.accessToken)
-      router.push('/')
+      await register(data)
+      router.push('/login')
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An unexpected error occurred')
     }
@@ -74,25 +72,6 @@ export const RegisterForm: React.FC = () => {
                 {error}
               </div>
             )}
-
-            <FormField
-              control={form.control}
-              name="username"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Username</FormLabel>
-                  <FormControl>
-                    <Input
-                      type="text"
-                      placeholder="johndoe"
-                      autoComplete="username"
-                      {...field}
-                    />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
 
             <FormField
               control={form.control}

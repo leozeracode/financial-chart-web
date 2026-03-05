@@ -18,7 +18,7 @@ export async function login(data: LoginRequest): Promise<AuthResponse> {
   return response.json()
 }
 
-export async function register(data: RegisterRequest): Promise<AuthResponse> {
+export async function register(data: RegisterRequest): Promise<void> {
   const response = await fetch(`${API_BASE_URL}/register`, {
     method: 'POST',
     headers: {
@@ -31,6 +31,4 @@ export async function register(data: RegisterRequest): Promise<AuthResponse> {
     const errorData = await response.json().catch(() => ({}))
     throw new Error(errorData.message || 'Registration failed')
   }
-
-  return response.json()
 }

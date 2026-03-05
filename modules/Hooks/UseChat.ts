@@ -24,7 +24,7 @@ export const useChat = () => {
         if (connectionRef.current) return;
 
         const newConnection = new signalR.HubConnectionBuilder()
-            .withUrl("http://localhost:5001/chatHub", { 
+            .withUrl("http://localhost:5050/chatHub", { 
                 accessTokenFactory: () => token! 
             })
             .withAutomaticReconnect()
@@ -40,8 +40,6 @@ export const useChat = () => {
                     await newConnection.start();
                     if (isMounted.current) {
                         setIsConnected(true);
-                        console.log("SignalR: Conexão Estabelecida.");
-                        
                         newConnection.on("ReceiveMessage", onMessageReceived);
                         newConnection.on("LoadHistory", (history) => setMessages(history));
                     }

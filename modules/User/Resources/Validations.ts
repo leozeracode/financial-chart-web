@@ -14,11 +14,6 @@ export const loginSchema = z.object({
 export type LoginFormData = z.infer<typeof loginSchema>
 
 export const registerSchema = z.object({
-  username: z
-    .string()
-    .min(1, 'Username is required')
-    .min(3, 'Username must be at least 3 characters')
-    .max(20, 'Username must be at most 20 characters'),
   email: z
     .string()
     .min(1, 'Email is required')

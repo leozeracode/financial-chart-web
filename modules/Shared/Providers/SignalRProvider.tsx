@@ -42,9 +42,7 @@ export const SignalRProvider: React.FC<{ children: React.ReactNode }> = ({ child
                 setConnectionStatus('connecting')
                 await connection.start()
                 setConnectionStatus('connected')
-                console.log('✅ SignalR Conectado!')
-            } catch (err) {
-                console.error('❌ Erro SignalR:', err)
+            } catch {
                 setConnectionStatus('disconnected')
             }
         }
