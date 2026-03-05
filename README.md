@@ -15,14 +15,11 @@ Real-time chat application with SignalR
 
 <br />
 
-![Stars](https://img.shields.io/github/stars/your-username/financial-chat?style=flat-square)
-![Forks](https://img.shields.io/github/forks/your-username/financial-chat?style=flat-square)
-![Issues](https://img.shields.io/github/issues/your-username/financial-chat?style=flat-square)
+![Stars](https://img.shields.io/github/stars/leozeracode/financial-chat?style=flat-square)
+![Forks](https://img.shields.io/github/forks/leozeracode/financial-chat?style=flat-square)
+![Issues](https://img.shields.io/github/issues/leozeracode/financial-chat?style=flat-square)
 ![License](https://img.shields.io/badge/license-MIT-green?style=flat-square)
 
-<br />
-
-[Demo](https://financial-chat.vercel.app) · [Report Bug](https://github.com/your-username/financial-chat/issues) · [Request Feature](https://github.com/your-username/financial-chat/issues)
 
 </div>
 
@@ -85,8 +82,8 @@ pnpm dev
 ### Environment Variables
 
 ```env
-NEXT_PUBLIC_API_BASE_URL=http://localhost:5000 || http://localhost:5001 
-NEXT_PUBLIC_SIGNALR_HUB_URL=http://localhost:5000 || http://localhost:5001 
+NEXT_PUBLIC_API_BASE_URL=http://localhost:5050
+NEXT_PUBLIC_SIGNALR_HUB_URL=http://localhost:5050
 ```
 
 <br />
